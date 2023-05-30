@@ -1,0 +1,18 @@
+<div class="products-content">
+  <p class="where">Продукты</p>
+  <div class="products-list">
+    <ul>
+      <li *ngFor="let product of products" class="product">
+        <img src="{{product.img_url}}" alt="">
+        <div class="product-info">
+          <p class="product-name">{{product.name}}</p>
+          <div class="tastes" *ngIf="product.tastes">
+            Вкусы:
+            <p class="taste" *ngFor="let taste of product.tastes">{{taste}}</p>
+          </div>
+          <p class="product-description">{{product.short_description}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
